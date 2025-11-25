@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LuckyBear Casino — Тавер Раш: до 360% бонуса + 250 фриспинов</title>
+<meta name="description" content="Играй в Тавер Раш в LuckyBear Casino: до 360% бонуса и до 250 фриспинов на первые депозиты. Мгновенные выплаты, мобильная версия и эксклюзивные акции — начни выигрывать сейчас.">
+<link rel="canonical" href="https://luckybearcasino.site/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0a1224">
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="LuckyBear Casino — Тавер Раш: до 360% бонуса">
+<meta property="og:description" content="Играй в Тавер Раш и получай до 360% бонуса + 250 фриспинов. Мобильная версия, быстрые выплаты, эксклюзивные акции.">
+<meta property="og:image" content="https://playtowerrush.ru/images/logo.png">
+<meta property="og:url" content="https://luckybearcasino.site/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LuckyBear Casino — Тавер Раш">
+<meta name="twitter:description" content="Бонус до 360% + 250 фриспинов — начни играть в Тавер Раш уже сегодня.">
+<meta name="twitter:image" content="https://playtowerrush.ru/images/logo.png">
+
+<link rel="preload" as="image" href="https://playtowerrush.ru/images/logo.png">
+<link rel="preload" as="image" href="https://luckybeargames.ru/icons/box1.png">
+<link rel="preload" as="image" href="https://luckybeargames.ru/icons/box2.png">
+
+<link rel="preload" as="font" href="fonts/BenzinBold.ttf" type="font/ttf" crossorigin>
+<link rel="icon" type="image/png" href="https://playtowerrush.ru/images/logo.png">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://luckybearcasino.site/#org",
+      "name":"LuckyBear Casino",
+      "url":"https://luckybearcasino.site/",
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://playtowerrush.ru/images/logo.png",
+        "width":600,
+        "height":600
+      }
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://luckybearcasino.site/#website",
+      "url":"https://luckybearcasino.site/",
+      "name":"LuckyBear Casino",
+      "publisher":{"@id":"https://luckybearcasino.site/#org"},
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://luckybearcasino.site/?s={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://luckybearcasino.site/#webpage",
+      "url":"https://luckybearcasino.site/",
+      "name":"LuckyBear Casino — Тавер Раш",
+      "isPartOf":{"@id":"https://luckybearcasino.site/#website"},
+      "breadcrumb":[],
+      "inLanguage":"ru"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Что такое Тавер Раш в LuckyBear Casino?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Тавер Раш — динамичная игра с мультипликаторами: поднимаясь по уровням башни, вы фиксируете выигрыш на удобном этапе и забираете множители."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Как получить бонус до 360% и фриспины?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Бонусы действуют на первые четыре депозита. Пополните счёт через страницу пополнения и активируйте акцию — условия указаны на сайте."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    @font-face{font-family:'Benzin';src:url('fonts/BenzinBold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+    :root{--bg:#0a1224;--bg-2:#0f1b39;--gold:#3b82f6;--gold-2:#60a5fa;--text:#ffffff;--muted:#b7b7c9;--accent:#64d9ff;--dark:#091021}
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: radial-gradient(1200px 700px at 10% 10%, rgba(59,130,246,0.08), transparent), radial-gradient(900px 600px at 90% 20%, rgba(96,165,250,0.08), transparent), var(--bg);
+      color: var(--text);
+      overflow-x:hidden;
+    }
+
+    /* Анимированный фон с точками */
+    canvas#bgCanvas {
+      position: fixed;
+      top:0;left:0;
+      width:100%;height:100%;
+      z-index:-1;
+      filter: drop-shadow(0 0 20px rgba(59,130,246,0.1));
+    }
+
+    .nav{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:#0b1224;border-bottom:1px solid #0f1b39;z-index:1000}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+    .brand-logo{width:42px;height:42px;border-radius:10px;box-shadow:0 0 25px rgba(255,215,0,0.45)}
+    .brand-title{font-family:'Benzin','Montserrat',sans-serif;font-weight:800;letter-spacing:.8px;text-transform:uppercase;background:linear-gradient(90deg,var(--gold),var(--gold-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 14px rgba(59,130,246,0.45)}
+    .brand-sub{display:block;font-size:.8rem;color:var(--muted)}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .nav-link{color:var(--muted);text-decoration:none;font-weight:600;transition:.2s}
+    .nav-link:hover{color:var(--text)}
+    .cta-small{font-family:'Benzin','Montserrat',sans-serif;padding:10px 16px;border-radius:22px;background:linear-gradient(45deg,var(--gold),var(--gold-2));color:#081225;font-weight:800;box-shadow:0 8px 24px rgba(59,130,246,0.35)}
+
+    .container {max-width:1100px;margin:0 auto;padding:110px 20px 40px;text-align:center;}
+    .hero-logo{width:140px;height:auto;display:block;margin:0 auto 14px;filter:drop-shadow(0 0 18px rgba(59,130,246,0.35))}
+    .logo {
+      font-family:'Benzin','Montserrat',sans-serif;
+      font-size:3.2rem;
+      font-weight:800;
+      background:linear-gradient(90deg,var(--gold),var(--gold-2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 0 35px rgba(59,130,246,0.6);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {from{text-shadow:0 0 15px var(--gold);} to{text-shadow:0 0 40px var(--gold-2);}}
+    .subtitle {font-size:1.2rem;color:var(--muted);margin:1rem 0 2.2rem;}
+    .cta-button {
+      font-family:'Benzin','Montserrat',sans-serif;
+      display:inline-block;
+      padding:18px 44px;
+      margin:15px;
+      font-size:1.2rem;
+      font-weight:700;
+      border-radius:50px;
+      background:linear-gradient(45deg,var(--gold),var(--gold-2));
+      color:#081225;
+      text-decoration:none;
+      box-shadow:0 10px 30px rgba(59,130,246,0.45);
+      transition:0.3s;
+      position:relative;
+      overflow:hidden;
+      cursor:pointer;
+    }
+    .cta-button:hover {transform:scale(1.07);box-shadow:0 20px 50px rgba(59,130,246,0.6)} 
+    .cta-button::before {
+      content:'';
+      position:absolute;
+      top:0;left:-100%;width:100%;height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,0.6),transparent);
+      transition:0.5s;
+    }
+    .cta-button:hover::before {left:100%;}
+
+    .tg-btn{background:linear-gradient(45deg,#2e60d9,#0f4aa3);color:#fff;box-shadow:0 10px 30px rgba(59,130,246,0.45)}
+
+    .strategy-box {
+      margin:3rem auto;
+      padding:2rem;
+      border-radius:20px;
+      background:#131e3a;
+      box-shadow:0 0 24px rgba(0,0,0,0.35);
+    }
+    .strategy-title {font-size:2rem;font-weight:800;margin-bottom:1rem;}
+    .strategy-steps {display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;}
+    .step {
+      flex:1 1 250px;
+      background:#172443;
+      border-radius:15px;
+      padding:1.5rem;
+      transition:0.3s;
+    }
+    .step:hover {transform:translateY(-8px);background:#1b2a4f} 
+    .step-number {font-size:2rem;font-weight:800;color:var(--gold);}
+    .step-text {margin-top:.5rem;font-weight:600;}
+
+    .promo-section {
+      margin:3rem auto;
+      padding:2rem;
+      border-radius:20px;
+      background:#111a33;
+      box-shadow:0 0 30px rgba(0,0,0,0.35);
+      position:relative;
+    }
+    .promo-section h2 {font-size:1.8rem;margin-bottom:1rem;}
+    .promo-section::after{content:"";position:absolute;top:-6px;right:-6px;width:56px;height:56px;background:linear-gradient(45deg,var(--gold),var(--gold-2));border-radius:12px;box-shadow:0 10px 30px rgba(59,130,246,0.45)}
+    .bonus-card{display:flex;flex-direction:column;gap:20px}
+    .chest-list{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .chest{flex:1 1 200px;min-width:200px;background:#15264b;border-radius:16px;padding:16px;box-shadow:inset 0 0 0 1px #1f3564;transition:.25s}
+    .chest:hover{transform:translateY(-4px)}
+    .chest-label{display:inline-block;padding:6px 10px;border-radius:999px;background:#1a2d57;font-weight:700;font-size:.9rem;margin-bottom:10px}
+    .chest-svg{width:90px;height:90px;margin:10px auto 6px;display:block}
+    .chest-img{width:90px;height:auto;margin:10px auto 6px;display:block}
+    .bonus-line{height:4px;background:#233a6e;border-radius:999px;margin:10px 0;position:relative}
+    .bonus-dot{position:absolute;left:12px;top:-4px;width:12px;height:12px;background:linear-gradient(45deg,var(--gold),var(--gold-2));border-radius:50%;box-shadow:0 0 12px rgba(59,130,246,0.7)}
+    .bonus-text{font-weight:700}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .btn-primary{background:linear-gradient(45deg,#1f4aa8,#0f2c76);color:#fff}
+    .btn-secondary{background:linear-gradient(45deg,#e9e9ec,#cfcfd6);color:#111}
+
+    .floating {
+      position:fixed;
+      font-size:2rem;
+      opacity:0.08;
+      animation:float 6s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+    .floating:nth-child(1){top:20%;left:10%;animation-delay:0s;}
+    .floating:nth-child(2){top:60%;right:15%;animation-delay:2s;}
+    .floating:nth-child(3){bottom:20%;left:20%;animation-delay:4s;}
+
+    .popup {
+      position:fixed;
+      top:50%;left:50%;transform:translate(-50%,-50%) scale(0.85);
+      background:linear-gradient(180deg,#0f1b39,#0a1224);
+      color:#fff;
+      padding:2rem;
+      border-radius:18px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.6),0 0 30px rgba(59,130,246,0.25);
+      border:1px solid #1f3564;
+      display:none;
+      z-index:1001;
+      text-align:center;
+      opacity:0;
+      transition:transform .35s ease, opacity .35s ease;
+    }
+    .popup.active {
+      display:block;
+      transform:translate(-50%,-50%) scale(1);
+      opacity:1;
+    }
+    .popup a {
+      display:inline-block;
+      margin-top:1rem;
+      padding:15px 30px;
+      border-radius:30px;
+      background:linear-gradient(45deg,var(--gold),var(--gold-2));
+      color:#081225;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .popup h3{margin-bottom:.6rem}
+    .popup .note{color:#ddd;margin-bottom:8px}
+    .popup .timer{font-weight:800;font-size:1.4rem;color:var(--gold);margin:8px 0 12px}
+    .popup .actions{display:flex;gap:12px;justify-content:center}
+    .popup-close{position:absolute;top:10px;right:12px;font-size:20px;line-height:20px;background:transparent;border:none;color:#fff;cursor:pointer}
+    .popup-close:hover{transform:scale(1.1)}
+    .overlay{position:fixed;inset:0;background:rgba(9,16,33,0.6);backdrop-filter:blur(4px);opacity:0;transition:opacity .35s ease;display:none;z-index:1000}
+    .overlay.active{display:block;opacity:1}
+
+    .footer{margin:3rem auto 2rem;opacity:.7;font-size:.9rem}
+
+    @media(max-width:768px){
+      .logo{font-size:2.2rem;}
+      .nav{padding:12px 16px}
+      .brand-title{font-size:1rem}
+      .cta-button{display:block;width:100%;margin:12px 0;padding:14px 22px;font-size:1rem}
+      .jackpot-btn{width:100%;padding:16px 22px}
+      .strategy-steps{flex-direction:column;}
+      .strategy-box{padding:1.4rem}
+      .container{padding:84px 14px 28px}
+      .subtitle{font-size:1rem;margin:0.8rem 0 1.2rem}
+      .promo-section{padding:1rem;box-shadow:0 6px 18px rgba(0,0,0,0.25)}
+      .chest-list{flex-direction:column;gap:12px}
+      .chest{min-width:auto}
+      .chest-img{width:72px}
+      .nav-links{gap:10px}
+      .nav-link{font-size:.9rem}
+      .accordion summary{padding:16px}
+      .accordion .content{padding:0 16px 16px}
+      .step{padding:1.2rem}
+      .footer{margin:2rem auto 1.2rem}
+      .btns{gap:10px}
+      .phone-wrapper{width:340px}
+      .phone-glow{width:280px;height:280px;filter:blur(26px)}
+    }
+    @media(max-width:480px){
+      .logo{font-size:1.8rem}
+      .nav{padding:12px}
+      .brand-sub{display:none}
+      .cta-button{padding:12px 18px;font-size:.95rem;margin:10px 0}
+      .subtitle{font-size:.95rem}
+      .phone-wrapper{width:300px}
+      .phone-glow{width:240px;height:240px}
+      .popup{padding:1.4rem;border-radius:16px}
+      .popup .timer{font-size:1.2rem}
+    }
+    @media(hover:none){
+      .cta-button:hover{transform:none;box-shadow:0 10px 30px rgba(59,130,246,0.45)}
+      .jackpot-btn:hover{transform:none;box-shadow:0 12px 40px rgba(59,130,246,0.55)}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .logo{animation:none}
+      .phone-wrapper{animation:none}
+      .cta-button::before{transition:none}
+    }
+    a,button{touch-action:manipulation}
+    .accordion{max-width:1100px;margin:30px auto;color:#ddd}
+    .accordion details{background:#15264b;border-radius:12px;margin-bottom:12px;box-shadow:inset 0 0 0 1px #1f3564}
+    .accordion summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:800;color:#fff}
+    .accordion summary::-webkit-details-marker{display:none}
+    .accordion .content{padding:0 20px 18px;line-height:1.7}
+    .accordion details[open]{box-shadow:0 12px 34px rgba(255,215,0,0.16)}
+    .phone-section{max-width:1100px;margin:30px auto}
+    .phone-wrapper{position:relative;width:560px;margin:0 auto;animation:phone-bob 4.5s ease-in-out infinite}
+    .phone-img{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 40px rgba(0,0,0,0.5))}
+    .phone-glow{position:absolute;top:12%;left:50%;transform:translateX(-50%);width:380px;height:380px;background:radial-gradient(closest-side, rgba(59,130,246,0.5), rgba(96,165,250,0.28), transparent 70%);filter:blur(30px);z-index:-1;border-radius:50%}
+    .phone-cta{max-width:1100px;margin:16px auto;text-align:center}
+    .jackpot-btn{font-family:'Benzin','Montserrat',sans-serif;background:linear-gradient(45deg,#2e60d9,#5fa2ff);color:#081225;font-weight:800;letter-spacing:.5px;box-shadow:0 12px 40px rgba(59,130,246,0.55);padding:20px 36px}
+    .jackpot-btn:hover{transform:scale(1.08);box-shadow:0 18px 55px rgba(59,130,246,0.7)}
+    .auth-btn{padding:10px 16px;border-radius:10px;background:linear-gradient(45deg,#2e60d9,#5fa2ff);color:#081225;font-weight:800;text-decoration:none;box-shadow:0 8px 24px rgba(59,130,246,0.35)}
+    @keyframes phone-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  </style>
+
+</head>
+<body>
+<!-- lightweight analytics: Yandex.Metrika (async) -->
+<script defer>
+(function(w,d,s,u,i){
+  try{
+    var ym_script = d.createElement(s); ym_script.src = 'https://mc.yandex.ru/metrika/tag.js?id=104266424'; ym_script.async = true;
+    var first = d.getElementsByTagName(s)[0]; first.parentNode.insertBefore(ym_script, first);
+    w[i]=w[i]||function(){(w[i].a=w[i].a||[]).push(arguments)};
+    w[i].l=1*new Date();
+    w[i](104266424,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});
+  }catch(e){console.warn('Metrika load failed',e)}
+})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=104266424','ym');
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104266424" style="position:absolute; left:-9999px;" alt="" aria-hidden="true"></div></noscript>
+
+<canvas id="bgCanvas" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;z-index:-1;filter:drop-shadow(0 0 12px rgba(255,215,0,0.06));"></canvas>
+<div id="exitOverlay" class="overlay" aria-hidden="true"></div>
+
+<div id="exitPopup" class="popup" role="dialog" aria-modal="true" aria-labelledby="bonusTitle" style="max-width:520px;width:90%">
+  <button id="exitClose" class="popup-close" aria-label="Закрыть">×</button>
+  <h3 id="bonusTitle">Секретный бонус 360% на первое пополнение</h3>
+  <div class="note">Поспеши забрать:</div>
+  <div id="exitTimer" class="timer">10:00</div>
+  <div class="actions">
+    <a id="exitClaim" class="jackpot-btn" href="https://lb333.me/5N9mCC" target="_blank" rel="noopener noreferrer">Забрать бонус</a>
+  </div>
+</div>
+
+<header class="nav" role="banner">
+  <a class="brand" aria-label="LuckyBear Casino — главная">
+    <img class="brand-logo" src="logo.png" alt="LuckyBear Casino логотип" title="LuckyBear Casino" width="42" height="42" loading="eager">
+    <div>
+      <div class="brand-title">LuckyBear Casino</div>
+      <div class="brand-sub"></div>
+    </div>
+  </a>
+  <nav class="nav-links" role="navigation" aria-label="Главное меню">
+    <a class="auth-btn" href="https://lb333.me/5N9mCC" target="_blank" rel="noopener noreferrer">Вход</a>
+    <a class="auth-btn" href="https://lb333.me/5N9mCC" target="_blank" rel="noopener noreferrer">Регистрация</a>
+  </nav>
+</header>
+
+<main class="container" role="main">
+  <img class="hero-logo" src="logo.png" alt="LuckyBear Casino — Тавер Раш логотип" title="LuckyBear Casino — Тавер Раш" width="140" height="140" loading="eager">
+  <h1 class="logo">LUCKYBEAR CASINO </h1>
+  <p class="subtitle">Играй в слоты на Лаки Бир Казино. Лови множители и забирай выигрыши — эксклюзивные бонусы для новых игроков.</p>
+
+  <a href="https://lb333.me/5N9mCC" class="cta-button" target="_blank" rel="noopener noreferrer" aria-label="Играть на сайте LuckyBear Casino">🚀 Играть на сайте</a>
+  <a href="https://t.me/Lucky_Bear_SpinPro_Bot/app?startapp=bXN0PTB4MTUzOTJmZWI1Jm09TklLSVRPUyZjPVNlb0JvdA_SeoTower" class="cta-button tg-btn" target="_blank" rel="noopener noreferrer" aria-label="Играть в Telegram">📱 Играть в Telegram</a>
+
+  <section class="promo-section" id="bonus" aria-labelledby="bonus-heading">
+    <div>
+      <h2 id="bonus-heading" style="font-size:1.4rem;margin-bottom:8px;color:#fff">Бонус 360% + 250 фриспинов на первые депозиты</h2>
+      <p style="color:var(--muted);margin-bottom:12px">Пополняй баланс и получай крупные бонусы — акция действует для новых игроков на первые четыре депозита.</p>
+      <div class="chest-list" role="list" aria-label="Пакеты бонусов">
+        <div class="chest" role="listitem">
+          <span class="chest-label">1 деп</span>
+          <img class="chest-img" src="https://luckybeargames.ru/icons/box1.png" alt="Пакет бонусов — первый депозит" title="Бонус первого депозита" width="90" height="90" loading="lazy">
+          <div class="bonus-line"><span class="bonus-dot" aria-hidden="true"></span></div>
+          <div class="bonus-text">До 360%</div>
+        </div>
+        <div class="chest" role="listitem">
+          <span class="chest-label">2 деп</span>
+          <img class="chest-img" src="https://luckybeargames.ru/icons/box2.png" alt="Пакет бонусов — второй депозит" title="Бонус второго депозита" width="90" height="90" loading="lazy">
+          <div class="bonus-line"></div>
+          <div class="bonus-text">До 360%</div>
+        </div>
+        <div class="chest" role="listitem">
+          <span class="chest-label">3 деп</span>
+          <img class="chest-img" src="https://luckybeargames.ru/icons/box2.png" alt="Пакет бонусов — третий депозит" title="Бонус третьего депозита" width="90" height="90" loading="lazy">
+          <div class="bonus-line"></div>
+          <div class="bonus-text">До 360% + 50 FS</div>
+        </div>
+        <div class="chest" role="listitem">
+          <span class="chest-label">4 деп</span>
+          <img class="chest-img" src="https://luckybeargames.ru/icons/box2.png" alt="Пакет бонусов — четвёртый депозит" title="Бонус четвёртого депозита" width="90" height="90" loading="lazy">
+          <div class="bonus-line"></div>
+          <div class="bonus-text">До 360% + 200 FS</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="cta-button" href="#seo" aria-label="Подробнее о бонусах">Подробнее</a>
+        <a class="cta-button" href="https://lb333.me/5N9mCC" target="_blank" rel="noopener noreferrer">Пополнить</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="phone-section" aria-labelledby="phone-heading" style="margin-top:20px">
+    <div class="phone-wrapper" aria-hidden="true">
+      <div style="position:absolute;top:12%;left:50%;transform:translateX(-50%);width:380px;height:380px;border-radius:50%;background:radial-gradient(closest-side, rgba(255,215,0,0.45), rgba(255,174,0,0.28), transparent 70%);filter:blur(30px);z-index:-1"></div>
+      <img class="phone-img" src="https://www.luckybearcasino.site/phone.png" alt="Тавер Раш — мобильная версия" title="Тавер Раш в мобильной версии LuckyBear Casino" width="560" height="560" loading="lazy">
+    </div>
+    <div style="text-align:center;margin-top:14px">
+      <a class="cta-button" href="https://lb333.me/5N9mCC" target="_blank" rel="noopener noreferrer" aria-label="Забрать свой куш">👉 ЗАБРАТЬ СВОЙ КУШ 👈</a>
+    </div>
+  </section>
+
+  <section id="seo" style="text-align:left;max-width:900px;margin:40px auto 0;color:#ddd">
+  <h2 style="font-size:1.8rem;margin-bottom:1rem;color:#fff">Тавер Раш в LuckyBear Casino — игра, которая приносит настоящие выигрыши</h2>
+  <p>В <strong>LuckyBear Casino</strong> вы найдёте уникальную игру <strong>Тавер Раш</strong>, которая сочетает в себе динамичный геймплей и возможность получать крупные выигрыши. Игра построена вокруг механики башни с уровнями, где каждый шаг вверх увеличивает множители и открывает новые возможности для кэшаута. Игроки могут выбирать уровень риска, контролировать свои ставки и фиксировать выигрыш на удобном этапе, что делает игру захватывающей и при этом безопасной. Тавер Раш привлекает внимание любителей азартных игр своей яркой графикой, простым управлением и возможностью быстро увеличить баланс.</p>
+  
+  <h3 style="margin-top:1.5rem;color:#fff">Почему игроки выбирают LuckyBear Casino</h3><br>
+  <p><strong>LuckyBear Casino</strong> предлагает своим пользователям полный спектр преимуществ премиум-класса. Здесь вы получите быстрые выплаты, честный и прозрачный геймплей, а также регулярные акции и бонусы. На первые четыре депозита вы можете получить до <strong>360%</strong> бонуса и до <strong>250 фриспинов</strong>, что позволяет стартовать с большим запасом и повышает шансы на значительные выигрыши. Тавер Раш доступен круглосуточно, а профессиональная поддержка всегда готова помочь с любыми вопросами. Благодаря удобному интерфейсу играть можно как с компьютера, так и с мобильного устройства, сохраняя полный контроль над игрой.</p>
+  
+  <h3 style="margin-top:1.5rem;color:#fff">Как начать играть и выигрывать в Тавер Раш</h3><br>
+  <p>Чтобы начать игру, достаточно нажать «Играть сейчас», пополнить баланс и выбрать подходящий уровень риска. Игра <strong>Тавер Раш</strong> в <strong>LuckyBear Casino</strong> позволяет уверенно подниматься по уровням башни, увеличивая множители и фиксируя выигрыш в любой момент. Каждое вращение и каждый шаг дают шанс на крупный выигрыш, а бонусная система и фриспины делают процесс ещё более увлекательным. Опытные игроки оценят стратегическую глубину игры, а новички смогут легко освоить механику и быстро почувствовать азарт настоящей победы.</p>
+<br>
+  <p>Выбирая <strong>LuckyBear Casino</strong> и игру <strong>Тавер Раш</strong>, вы получаете не просто слот — вы получаете возможность полностью погрузиться в атмосферу азарта, насладиться яркой графикой и получить максимальные выигрыши. Это идеальный выбор для всех, кто ценит качественный игровой процесс, честность казино и щедрые бонусы. Начните играть прямо сейчас и убедитесь сами, почему Тавер Раш в LuckyBear Casino пользуется такой популярностью среди игроков.</p>
+
+  </section>
+<script>
+(function(){
+  var popup = document.getElementById('exitPopup');
+  var overlay = document.getElementById('exitOverlay');
+  var timerEl = document.getElementById('exitTimer');
+  var closeBtn = document.getElementById('exitClose');
+  var claimBtn = document.getElementById('exitClaim');
+
+  function show(){overlay.classList.add('active');popup.classList.add('active');}
+  function hide(){overlay.classList.remove('active');popup.classList.remove('active');}
+  function fmt(ms){var t=Math.max(0,Math.floor(ms/1000));var m=(''+Math.floor(t/60)).padStart(2,'0');var s=(''+(t%60)).padStart(2,'0');return m+':'+s;}
+
+  var deadline = localStorage.getItem('exit_bonus_deadline');
+  var now = Date.now();
+  if(!deadline || now>=Number(deadline)){
+    deadline = String(now + 10*60*1000);
+    localStorage.setItem('exit_bonus_deadline', deadline);
+  }
+
+  var timer;
+  function start(){
+    clearInterval(timer);
+    timer = setInterval(function(){
+      var remain = Number(deadline) - Date.now();
+      timerEl.textContent = fmt(remain);
+      if(remain<=0){
+        clearInterval(timer);
+        timerEl.textContent = '00:00';
+        claimBtn.setAttribute('disabled','true');
+        claimBtn.textContent = 'Время вышло';
+      }
+    },1000);
+  }
+
+  document.addEventListener('mouseout', function(e){
+    if(e.relatedTarget===null && e.clientY<=0){
+      if(localStorage.getItem('exit_bonus_claimed')!=='1' && !popup.classList.contains('active')){ show(); start(); }
+    }
+  });
+
+  closeBtn.addEventListener('click', function(){ hide(); });
+  overlay.addEventListener('click', function(){ hide(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ hide(); } });
+  claimBtn.addEventListener('click', function(){ localStorage.setItem('exit_bonus_claimed','1'); });
+})();
+</script>
+    <div class="accordion" id="texts"> <details><summary><h3>Узнать больше</h3></summary><div class="content"><br><br>
+      <details><summary>Обзор Тавер Раш в лаки бир казино</summary><div class="content">Тавер раш в лаки бир казино — прогрессия уровней с растущими множителями и быстрым кэшаутом. В лаки бир казино тавер раш запускается мгновенно, интерфейс понятен, акценты помогают принимать решения быстрее и точнее.</div></details>
+      <details><summary>Банкролл для тавер раш в лаки бир казино</summary><div class="content">Для тавер раш в лаки бир казино делите бюджет на сессии, держите ставку 1–2% от банкролла и фиксируйте прибыль чаще при нестабильной серии. Такой подход делает тавер раш устойчивее к дисперсии и понятнее статистически.</div></details>
+      <details><summary>Риск‑профили тавер раш</summary><div class="content">В лаки бир казино тавер раш удобно играть по трём профилям: консервативный — ранний выход; сбалансированный — гибкая длина прохода; агрессивный — ставка на высокие множители при строгих лимитах. Выбирайте профиль под цели сессии тавер раш.</div></details>
+      <details><summary>Темп игры тавер раш</summary><div class="content">Тавер раш в лаки бир казино комфортен в коротких сессиях по 20–30 минут. Перерывы помогают сохранять концентрацию, а быстрый вход в тавер раш позволяет не терять ритм и качество решений.</div></details>
+      <details><summary>Плюсы лаки бир казино для тавер раш</summary><div class="content">Лаки бир казино даёт быстрые депозиты, честные условия и стабильную работу на мобильных устройствах. Для тавер раш это меньше задержек и понятная логика управления, что повышает общий результат.</div></details>
+      <details><summary>Бонусы лаки бир казино для тавер раш</summary><div class="content">В лаки бир казино бонус до 360% и фриспины поддерживают стартовые сессии тавер раш: первый депозит усиливает множитель, второй и третий добавляют фриспины, четвёртый закрепляет высокий процент.</div></details>
+      <details><summary>Частые ошибки в тавер раш</summary><div class="content">Для лаки бир казино тавер раш типичны ошибки: пересиживание уровней, отсутствие плана выхода и хаотичное повышение ставок. Решение — фиксировать цели заранее и соблюдать лимиты тавер раш независимо от эмоций.</div></details>
+      <details><summary>Мобильный тавер раш</summary><div class="content">В лаки бир казино тавер раш адаптирован под вертикальные экраны, крупные контролы и экономию трафика. Это облегчает игру на ходу и делает тавер раш удобным при слабом соединении.</div></details>
+      <details><summary>Продвинутые стратегии тавер раш</summary><div class="content">В лаки бир казино для тавер раш используйте гибридный подход: короткие выходы при отрицательной динамике и более длинные проходы при устойчивой позитивной серии. Ключ — фиксированные правила смены режима тавер раш и никакой импровизации без данных.</div></details>
+      <details><summary>Волатильность тавер раш</summary><div class="content">В лаки бир казино тавер раш чувствителен к волатильности: чем выше риск, тем больше разброс. Снизить дисперсию помогает ранний кэшаут и меньшая ставка относительно банкролла, так тавер раш становится стабильнее.</div></details>
+      <details><summary>Лимиты в лаки бир казино</summary><div class="content">Лимиты прибыли и убытка задаются до начала сессии тавер раш. Достигли цели — завершите раунд и сделайте паузу. В лаки бир казино дисциплина повышает среднюю эффективность тавер раш и предотвращает пересидку уровней.</div></details>
+      <details><summary>Аналитика тавер раш</summary><div class="content">В лаки бир казино фиксируйте дату, ставку, уровни и кэшаут для тавер раш. По данным видно, где вы чаще фиксируете прибыль и где теряете преимущество. Это помогает настроить длину проходов тавер раш и частоту выхода.</div></details>
+      <details><summary>Ставка для тавер раш</summary><div class="content">В лаки бир казино ставка должна соответствовать профилю риска и целям тавер раш. Для стабильности — минимальные ставки и ранний выход; для агрессивного профиля — постепенное увеличение ставки строго в рамках лимитов.</div></details>
+      <details><summary>Подготовка к длинной сессии тавер раш</summary><div class="content">В лаки бир казино для тавер раш подготовьте uninterrupted режим, воду, удобную позу и отключите уведомления. Тавер раш требует концентрации, комфортные условия повышают точность решений.</div></details>
+      <details><summary>FAQ: множители в тавер раш</summary><div class="content">В лаки бир казино тавер раш множитель растёт с уровнем башни. Игрок сам выбирает момент фиксации выигрыша, универсальной стратегии нет — всё зависит от профиля риска.</div></details>
+      <details><summary>FAQ: бонусы лаки бир казино</summary><div class="content">На один депозит активируется один пакет бонусов. Комбинации регулируются правилами акции. Для тавер раш проверяйте условия лаки бир казино на странице пополнения перед началом сессии.</div></details>
+      <details><summary>Глоссарий тавер раш</summary><div class="content">Башня — уровни прогрессии тавер раш; множитель — коэффициент выигрыша; кэшаут — фиксация; волатильность — разброс исходов; банкролл — бюджет. В лаки бир казино эти термины помогают выстраивать стратегию.</div></details>
+      <details><summary>Кейсы игроков лаки бир казино</summary><div class="content">Игроки лаки бир казино отмечают, что тавер раш устойчиво даёт X5–X10 при дисциплине: строгие лимиты, постепенное увеличение длины прохода и спокойная фиксация выигрышей без попытки дожать максимум.</div></details>
+      <details><summary>Интерфейс лаки бир казино для тавер раш</summary><div class="content">Лаки бир казино использует визуальные акценты, крупные кнопки и понятную иерархию. Для тавер раш это снижает время навигации, повышает точность и сокращает неверные клики.</div></details>
+      <details><summary>Безопасность аккаунта в лаки бир казино</summary><div class="content">В лаки бир казино используйте уникальные пароли и двухфакторную аутентификацию. Для тавер раш важно защищать доступ к аккаунту и не входить из публичных сетей.</div></details>
+      <details><summary>Поддержка и выплаты лаки бир казино</summary><div class="content">Служба поддержки лаки бир казино оперативна, выплаты проходят по правилам и зависят от метода. Для тавер раш это комфортный цикл: депозит, сессия, вывод.</div></details>
+      <details><summary>Итоги: лаки бир казино и тавер раш</summary><div class="content">Лаки бир казино и тавер раш — сочетание динамики, бонусов и удобства. Соблюдайте банкролл‑менеджмент, анализируйте результаты и используйте акции, чтобы играть осознанно и эффективно.</div></details></div></details>
+    </div>
+    <div class="footer">© LuckyBear Casino · Тавер Раш</div>
+  </div>
+
+  <div class="popup" id="popup">
+    <p>✅ Промокод скопирован! Используй его при регистрации в LuckyBear Casino.</p>
+    <a href="https://lb333.me/5N9mCC" target="_blank">Перейти к игре</a>
+  </div>
+
+
+<!-- Minimal, deferred scripts for interactivity and optimized bg canvas -->
+<script>
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const size = {
+        w: window.innerWidth,
+        h: window.innerHeight
+    };
+
+    canvas.width = size.w;
+    canvas.height = size.h;
+
+    // Кол-во звезд динамическое (меньше на телефонах)
+    const STAR_COUNT = size.w < 600 ? 60 : 120;
+
+    // Быстрее, чем arc()
+    const stars = Array.from({ length: STAR_COUNT }, () => ({
+        x: Math.random() * size.w,
+        y: Math.random() * size.h,
+        r: Math.random() * 1.8 + 0.3,
+        dx: (Math.random() - 0.5) * 0.4,
+        dy: (Math.random() - 0.5) * 0.4
+    }));
+
+    function drawStars() {
+        ctx.clearRect(0, 0, size.w, size.h);
+        ctx.fillStyle = "#ffffff";
+
+        for (let i = 0; i < STAR_COUNT; i++) {
+            const s = stars[i];
+
+            // Рисуем точку без круга — быстрее
+            ctx.fillRect(s.x, s.y, s.r, s.r);
+
+            s.x += s.dx;
+            s.y += s.dy;
+
+            // Отскоки
+            if (s.x < 0 || s.x > size.w) s.dx = -s.dx;
+            if (s.y < 0 || s.y > size.h) s.dy = -s.dy;
+        }
+
+        requestAnimationFrame(drawStars);
+    }
+
+    drawStars();
+
+    // Resize throttle (не вызываем слишком часто)
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            size.w = window.innerWidth;
+            size.h = window.innerHeight;
+            canvas.width = size.w;
+            canvas.height = size.h;
+        }, 150);
+    });
+</script>
+
+</body>
+</html>
